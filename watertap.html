@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		var a=0;
+		var b=0;
+		var c=0;
+$(".im1").click(function(){
+$(".p1").animate({height:'toggle'},function(){
+	$(".mix").css('background-color','rgb(0,0,255)')
+});
+$(".wh1").animate({height:'300px'},10000,function()
+{ 
+	$(".p1").hide();
+	$(".wit").stop();
+})
+if(a%2==0)
+	{
+		$(".wh1").animate();
+			$(".wit").animate({height:'-=100px'},20000);
+					$(".p1").animate({height:'-=1200px'},100000);
+
+
+	}
+	else
+	{
+		$(".wh1").stop();
+				$(".p1").stop();
+
+		$(".wit").stop();
+	}
+	a++;
+});
+$(".im2").click(function(){
+$(".p2").animate({height:'toggle'},function(){
+	$(".mix").css('background-color','red')
+});
+$(".wh2").animate({height:'300px'},10000,function()
+{
+	$(".p2").hide();
+    $(".wit").stop();
+
+})
+if(b%2==0)
+	{
+		$(".wh2").animate();
+		$(".wit").animate({height:'-=100px'},20000);
+		$(".p2").animate({height:'-=1200px'},80000);
+
+
+	}
+	else
+	{
+		$(".wh2").stop();
+		$(".p2").stop();
+		$(".wit").stop();
+	}
+	b++;
+});
+$(".im3").click(function(){
+$(".p3").animate({height:'toggle'},function(){
+	$(".mix").css('background-color','green')});
+$(".wh3").animate({height:'300px'},10000,function()
+{
+	$(".p3").hide();
+	$(".wit").stop();
+})
+if(c%2==0)
+	{
+		$(".wh3").animate();
+		$(".wit").animate({height:'-=100px'},20000);
+		$(".p3").animate({height:'-=1200px'},80000);
+
+	}
+	else
+	{
+		$(".wh3").stop();
+		$(".p3").stop();
+			$(".wit").stop();
+
+	}
+	c++;
+});
+	});
+</script>
+
+
+
+
+
+	<title> color changer</title>
+</head>
+<body>
+  	<div  class="bo1"><div class="bg1"></div>
+  <div class="wh1"> </div></div>
+  	<a href="#" id="a1">
+  	<img src="1.png" class="im1" style="width:3%;height: 5%; position:absolute; margin-left:156px;margin-top: -30px">
+    </a>
+  	<div  class="bo2" ><div class="bg2"></div>
+  <div class="wh2"> </div></div>
+  	<a href="#" id="a2">
+  	<img src="1.png" class="im2" style="width:3%;height: 5%; position:absolute; margin-left:406px;margin-top: -30px">
+    </a>
+  	<div  class="bo3" ><div class="bg3"></div>
+  <div class="wh3"> </div></div>
+    <a href="#">
+  	<img src="1.png" class="im3" style="width:3%;height: 5%; position:absolute; margin-left:656px;margin-top: -30px">
+    </a>
+    <div  class="bo4" style="position: absolute;">
+    	<div class="mix" id="di" style="height: 150px;
+	width: 100%;	
+	position: absolute;
+	margin-top: 50px;
+	background-color:blue;"> </div>
+	<div data class="wit" style="height: 150px;
+	width: 100%;	
+	position: absolute;
+	margin-top: 50px;
+	background-color:white;"></div>
+    </div>    
+<script src="script.js">
+</script>
+</body>
+   
+
+    <div class="p1" style="position: absolute;display: none;margin-top: -5px;height: 255px;margin-left:186px;margin-bottom: none;"></div>
+
+    <div class="p2" style="position: absolute;display:  none;margin-top: -2px;height: 255px;margin-left:435px;overflow:auto;margin-bottom: none;"></div>
+     <div class="p3" style="position: absolute;display: none;margin-top: -1px;height: 255px;margin-left:686px;margin-bottom: none;" ></div>
+
+</html>
