@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	    $(".c").click(function(){
+	    	var temp=this.id;
+           $(document).keypress(function(event){
+           	var k=event.key;
+           if(k=="w")
+           	{
+           		$("#"+temp).animate({marginTop: "-=50px"});
+           	}
+           if(k=="a")
+           	{
+           		$("#"+temp).animate({marginLeft: "-=50px"});
+           	}
+           if(k=="s")
+           	{
+           		$("#"+temp).animate({marginTop: "+=50px"});
+           	}
+           if(k=="d")
+           	{
+           		$("#"+temp).animate({marginLeft: "+=50px"});
+           	}
+           	});
+               
+        });
+
+});
+</script>
+</head>
+<body>
+<div id="box1" class="c" style="background:#98bf21;height:50px;width:50px;margin-top:6px;position:absolute"></div>
+<div id="box2" class="c" style="background:#98bf21;height:50px;width:50px;margin-top:100px;position:absolute"></div>
+<div id="box3" class="c" style="background:#98bf21;height:50px;width:50px;margin-top:200px;position:absolute"></div>
+<div id="box4" class="c" style="background:#98bf21;height:50px;width:50px;margin-top:300px;position:absolute"></div>
+</body>
+</html>
+
