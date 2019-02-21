@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		calculator
+	</title>
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+      $("input").click(function(){
+var b=this.name;
+var a=this.value;
+if(b!="b1")
+{
+	if(b=="e")
+	{
+		var exp=$(".ans").val();
+		var ans=eval(exp);
+		$(".ans").val(ans);
+	}
+	else
+	{
+		if(($(".ans").val())!=null)
+		{
+         $(".ans").val($(".ans").val()+a);
+		}
+
+	}
+}
+else
+{
+	$(".ans").val("");
+}
+});
+
+	});
+
+
+
+
+	</script>
+	<style type="text/css">
+		input
+		{
+			border-color:#f2f2f2;
+			border-spacing:50px;
+			width: 50px; height: 30px;
+		}
+	</style>
+</head>
+<body style="background-color:#778899;">
+	
+	<div style="border: solid black;border-width: 2px ;width:280px ;top:10%;left: 40%;padding:10px; position: absolute;margin-right:230px background-color:#B4FF22 "   class="jumbotron text-center" >
+		<h2 style="top:-12px">
+		calculator
+	</h2>
+	<br>
+<form name="c" id="i">
+<div class="container">
+
+		<input type="text" class="ans" name="txt" style=" text-align: right;position: absolute; height:34px ;width:162px; margin-left:-83px; margin-top:-18px;border-color: black" >
+<br>
+<input type="button" name="b1" value="c" >
+<input type="button" name="b2" value="(" >
+<input type="button" name="b3" value=")" >
+<br>
+<input type="button" name="b4" value="1">
+<input type="button" name="b5" value="2" >
+<input type="button" name="p" value="+">
+<br>
+<input type="button" name="b6" value="3" >
+<input type="button" name="b7" value="4" >
+<input type="button" name="m" value="-" >
+<br>
+<input type="button" name="b8" value="5" >
+<input type="button" name="b9" value="6" >
+<input type="button" name="mu" value="*" >
+<br>
+<input type="button" name="b10" value="7" >
+<input type="button" name="b11" value="8" >
+<input type="button" name="d" value="/">
+<br>
+<input type="button" name="b12" value="9">
+<input type="button" name="b13" value="0">
+<input type="button" name="e" value="=">
+<br>
+</div>
+</form>
+
+	</div>
+</body>
+</html>
