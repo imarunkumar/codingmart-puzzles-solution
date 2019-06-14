@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title> Road Puzzle | Codingmart Hiring</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+        <script type="text/javascript">
+            function move()
+            {
+                var a=document.getElementById("m");
+                var b=document.getElementById("n");
+                var c=document.getElementById("s");
+                var pos=0;
+                var id=setInterval(frame,10);
+                function frame()
+                {
+                    if(iscoll(a,b))
+                    {
+                        alert("game over");
+                        clearInterval (id);
+                    }
+                    if(pos==450)
+                    {
+                        pos=0;
+                    }
+                    else
+                    {
+                        pos++;
+                        a.style.top=pos+"px";
+                    }
+                }
+            }
+            function iscoll(a,b)
+            {
+              var arec=a.getBoundingClientRect();
+              var brec=b.getBoundingClientRect();
+              return !(((arec.top+arec.height)<(brec.top))||(arec.top>(brec.top+brec.height))||((arec.left+arec.width)<brec.left)||(arec.left>(brec.left+brec.width)));
+            }
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+             $('#bt').onclick(function(){
+
+             })
+            });
+
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+    $(document).keydown(function(e) {
+        switch(e.which) {
+            case 37: 
+            $(".car").css("left","42%")
+            break;
+    
+            case 39:
+            $(".car").css("left","50%")
+            break;
+    
+            default: return;
+        }
+        e.preventDefault();
+    });
+    $
+})
+        </script>
+    </head>
+    <body>
+      
+          
+        <div class="container">
+
+            <img src="images/road.gif" alt="" id="s" class="roadGif">
+           
+            <img src="images/car.png" id="m" style="width: 80px;
+    height: 50px;
+    width: 50px;
+    left:  43%;
+    position: absolute;
+    top: 250px;transform: rotate(180deg)" >
+            <img src="images/car.png" alt="" id="n"class="car">
+            <button  class="btn-primary" style="margin-left: 47%" onclick="move()" id="bt"> Start game!</button>
+        </div>
+
+    </body>
+</html>
